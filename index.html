@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cálculo de Dose Máxima</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box" id="login-box">
+    <div class="login-logo">
+        Cálculo de <b>Dose Máxima</b>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+        <div class="card-body login-card-body">
+            <form action="./index.html" method="post">
+                <div class="form-group">
+                    <label>Selecione um anestésico</label>
+                    <select class="form-control" id="selecionar" v-on:change="calcular">
+                        <option>Selecionar</option>
+                        <optgroup label="Lidocaína">
+                            <option>Tubete com 30mg</option>
+                        </optgroup>
+                        <optgroup label="Articaína">
+                            <option>Tubete com 40mg</option>
+                        </optgroup>
+                        <optgroup label="Prilocaína">
+                            <option>Tubete com 30mg a 3%</option>
+                            <option>Tubete com 40mg a 4%</option>
+                        </optgroup>
+                        <optgroup label="Mepivacaína">
+                            <option>Tubete com 20mg a 2%</option>
+                            <option>Tubete com 30mg a 3%</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="peso">Insira seu peso</label>
+                    <input type="number" class="form-control" id="peso" placeholder="Inserir peso">
+                </div>
+                <div class="callout callout-success" style="visibility: hidden"><h3>mg</h3></div>
+                <button type="button" class="btn btn-primary btn-block" v-on:click="calcular">Calcular</button>
+            </form>
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="./plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="./dist/js/adminlte.min.js"></script>
+<script src="./plugins/vue/vue.js"></script>
+<script src="./scripts/calculo.js"></script>
+</body>
+</html>
