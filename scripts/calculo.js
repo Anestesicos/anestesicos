@@ -27,16 +27,16 @@ new Vue({
 
             if (anestesico === "Lidocaína 2% - 36mg") { // Lidocaína
                 calculo = (VPeso * 7) < 500 ? (VPeso * 7) : 500;
-                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / quantidadePorTubete(quantAnest)).toFixed(1) + " tubetes"}</h3>`;
+                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / 36).toFixed(1) + " tubetes"}</h3>`;
             } else if (anestesico === "Articaína 4% - 72mg") { //  Articaína
                 calculo = (VPeso * 7) < 500 ? (VPeso * 7) : 500;
-                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / quantidadePorTubete(quantAnest)).toFixed(1) + " tubetes"}</h3>`;
+                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / 72).toFixed(1) + " tubetes"}</h3>`;
             } else if (anestesico === "Prilocaína 3% - 54mg") { // Prilocaína
                 calculo = (VPeso * 8) < 600 ? (VPeso * 8) : 600;
-                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / quantidadePorTubete(quantAnest)).toFixed(1) + " tubetes"}</h3>`;
+                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / 54).toFixed(1) + " tubetes"}</h3>`;
             } else if (anestesico === "Mepivacaína 2% - 36mg") { // Mepivacaína
                 calculo = (VPeso * 6.6) < 400 ? (VPeso * 6.6) : 400;
-                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / quantidadePorTubete(quantAnest)).toFixed(1) + " tubetes"}</h3>`;
+                mostrar = `<h3>${calculo + "mg"}</h3><h3>${(calculo / 36).toFixed(1) + " tubetes"}</h3>`;
             }
             resultado.innerHTML = mostrar;
             resultado.style.visibility = "visible";
